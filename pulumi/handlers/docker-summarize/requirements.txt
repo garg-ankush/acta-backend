@@ -1,0 +1,5 @@
+openai
+pymongo
+newspaper3k
+python-dotenv
+newsapi-python
