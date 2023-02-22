@@ -1,1 +1,4 @@
 .env
+__pycache__/get_articles.cpython-39.pyc
+__pycache__/summarize.cpython-39.pyc
+__pycache__/uploader_service.cpython-39.pyc
