@@ -12,4 +12,4 @@ RUN mkdir -p ${FUNCTION_DIR}
 # Copy handler function and package.json
 COPY app.py ${FUNCTION_DIR}
 
-CMD [ "app.handler" ]
+CMD ["app.handler"]
