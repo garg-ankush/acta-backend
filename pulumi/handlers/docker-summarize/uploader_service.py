@@ -15,6 +15,5 @@ class Uploader:
 
 def upload(articles):
     uploader = Uploader()
-    print("uploading")
     uploader.upload(articles)
-    print("upload complete.")
+    print("Upload complete..")
