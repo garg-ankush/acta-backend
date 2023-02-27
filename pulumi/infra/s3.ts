@@ -1,6 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+// https://github.com/pulumi/pulumi/issues/1911
 
 const STACK = "dev"
 
