@@ -16,7 +16,7 @@ NUMBER_OF_DAYS_FOR_NEWS = 3
 END_DATE = datetime.today()
 START_DATE = datetime.today() - timedelta(NUMBER_OF_DAYS_FOR_NEWS)
 
-def get_N_headline_stories(topic, number_of_stories=10):
+def get_N_headline_stories(topic: str, number_of_stories: int =10):
     return newsAPI_client.get_everything(
         q=topic,
         language='en',
@@ -34,11 +34,11 @@ def download_full_article(headline: dict):
     article.parse()
     return article.text
 
-def get_articles(topic=topic, number_of_stories=10):
+def get_articles(topic: str, number_of_stories: int=10):
     full_stories = []
     headline_stories = get_N_headline_stories(topic=topic, number_of_stories=number_of_stories)
     for headline_story in headline_stories['articles']:
-        full_article = download_full_article(headline_story)
+        full_article = download_full_article(headline=headline_story)
         complete_story = {
             "author": headline_story['author'],
             "title": headline_story['title'],

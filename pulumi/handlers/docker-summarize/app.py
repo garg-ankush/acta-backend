@@ -38,11 +38,12 @@ def handler(event, context):
             content = content[:MAX_LENGTH_FOR_ARTICLE_SUMMARIES]
 
         summary = summarize(article=content)
-        article['summary'] = summary['choices'][0]['text']
+        article['summary'] = summary['choices'][0]['message']['content']
         summarized_articles.append(article)
 
+
     # Upload the entire article including summaries
-    upload(summarized_articles)
+    upload(articles=summarized_articles)
 
     # After upload completes, send a post content to an api
     for article in articles:
